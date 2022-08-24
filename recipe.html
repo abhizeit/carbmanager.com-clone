@@ -66,13 +66,13 @@
     }
     #filtering>button{
         border-radius: 20px;
-        width: 15%;
-        background-color: rgb(208, 208, 208);
+        width: 20%;
+        background-color: transparent;
         height: 40px;
-        opacity: 60%;
-        color: #fff;
-        font-size: 15px;
-        font-weight: bolder;
+        opacity: 80%;
+        color: white;
+        font-size: 10px;
+        font-weight: 800;
     }
     #filterByName{
         display: flex;
@@ -166,10 +166,10 @@
             </p>
 
             <div id="filtering">
-                <button id="">Chinese</button>
-                <button id="">Quick & Easy</button>
-                <button id="">Burger</button>
-                <button id="">Desserts</button>
+                <button id="chinese">Chinese</button>
+                <button id="quick" >Quick & Easy</button>
+                <button id="burger">Burger</button>
+                <button id="des">Desserts</button>
             </div>
 
         </div>
@@ -192,55 +192,56 @@
 
 let container=document.getElementById('container')
 let data
-let id;
+// let id;
 let search;
 
-let arr=document.getElementById('search_button')
 
-// arr.forEach(element => {
-//     element.addEventListener('click',func)
-//     function func(){
-//         query=element.id
-//         searchMe()
-//         localStorage.setItem('empty','full')
-//     }
-// });
+// if(search.length===undefined){
+//     search
+// }
 
+let searchMe= async ()=>{
+    // if(!search){
+    //     value="chicken"
+    // }else{
+        search=document.getElementById('search_bar').value
 
-
-    let searchMe= async ()=>{
         try{
-            search=document.getElementById('search_bar').value
-
-
+            // value=search
             let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
-
-            data=await res.json()
-            console.log('data:', data.searchResults[0].results)
-
             
-
-            // let actual_data=data
-
-            // console.log('data:', actual_data)
-            appendData(data)
-
+            data=await res.json()
+            let actual_data=data.searchResults[0].results
+            console.log('data:', actual_data)
+            appendData(actual_data)
+            // localStorage.setItem('empty','full')
         }catch(err){
             console.log(err);
         }
     }
-    // searchMe()
+    
+    let arr=document.querySelectorAll('#filtering>button')
+
+    arr.forEach(element => {
+    element.addEventListener('click',func)
+    function func(){
+        search=(element.id)
+        console.log('search:', search)
+        
+        searchMe()
+        // localStorage.setItem('empty','full')
+    }
+});
+
 
     function appendData(data){
         container.innerHTML=null
-        data.searchResults[0].results.forEach(element => {
+        data.forEach(element => {
             let div=document.createElement("div")
     
             let img=document.createElement("img")
             img.src=element.image
 
-            // img.style.height="100px";
-            // img.style.width="100px"
             let name=document.createElement("h3")
             name.innerHTML=element.name
 
@@ -257,17 +258,32 @@ let arr=document.getElementById('search_button')
     }
 
 
+    // let chinese=document.getElementById('chinese')
+    // async function China(){
+    //     try{
+    //         let res=await fetch(`https://api.spoonacular.com/food/search?query=chinese&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
+             
+    //             data=await res.json()
+    //             let actual_data=data.searchResults[0].results
+    //             console.log('data:', actual_data)
+    //             appendData(data)
+    // }catch(err){
+    //     console.log(err);
+    // }
+    // }
 
 
-    let home=document.querySelector('search_button').addEventListener('click',function(){
-    localStorage.setItem('empty','empty')
-})
-
-let empty = localStorage.getItem('empty')
-if(empty=='full'){
-    console.log('empty');
-}else{
-    query='in'
-    searchMe()
-}
+    // let quick=document.getElementById('quick')
+    // async function Quick(){
+    //     try{
+    //         let res=await fetch(`https://api.spoonacular.com/food/search?query=quick&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
+             
+    //             data=await res.json()
+    //             let actual_data=data.searchResults[0].results
+    //             console.log('data:', actual_data)
+    //             appendData(data)
+    // }catch(err){
+    //     console.log(err);
+    // }
+    // }
 </script>
