@@ -6,149 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe</title>
 </head>
-<style>
-    *{
-        margin: 0px;
-        
-    }
-    #upper_section{
-        border: 2px solid red;
-        height: 600px;
-        display: grid;
-        position:relative;
-        background-image:url(https://burst.shopifycdn.com/photos/finger-food-and-drinks-on-dark-wood.jpg?width=925&format=pjpg&exif=1&iptc=1);
-        background-color: rgb(204, 208, 208);
-        background-size:cover;
-        align-items:center;
-        background-color: #F6F6F6;
-
-    }
-    #explore{
-        /* color: white; */
-        /* font-size: 50px; */
-        /* border: 2px solid red; */
-        width: 100%;
-        margin: auto;
-        /* font-weight: bolder; */
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 48px;
-        font-weight: 400;
-        line-height: 48px;
-        color: #fff;
-        line-height: 60px;
-        margin-bottom: 40px;
-    }
-    #search{
-        width:40%;
-        /* border: 2px solid red; */
-        margin: 5px auto;
-        height: 400px;
-        /* line-height: 50px; */
-    }
-    ::-webkit-input-placeholder{
-        text-align: left;
-    }
-    #search_bar{
-        width: 88%;
-        text-align: center;
-        height: 50px;
-        border-radius: 50px;
-        padding: 0 40px 0 40px;
-        /* border: 2px solid red; */
-    }
-    #para_explore{
-        box-sizing: border-box;
-        font-size: 18px;
-        font-weight: 700;        
-        line-height: 3rem;
-        color: #fff;
-        margin-bottom: 1rem;
-    }
-    #filtering>button{
-        border-radius: 20px;
-        width: 20%;
-        background-color: transparent;
-        height: 40px;
-        opacity: 80%;
-        color: white;
-        font-size: 10px;
-        font-weight: 800;
-    }
-    #filterByName{
-        display: flex;
-        /* border: 2px solid red; */
-        justify-content: space-evenly;
-        color:#6f737a;
-        font-size: 20px;
-        width: 80%;
-        align-items: center;
-        margin: auto;
-        /* text-decoration: underline; */
-        text-align: center;
-        margin-top: 20px;
-        /* background-color: #F6F6F6; */
-
-    }
-    #filterByName>div:nth-child(1){
-        /* border: 2px solid red; */
-        /* background-color: white; */
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        width: 5%;
-        padding: 0px;
-        height: 30px;
-        color:#6f737a;
-        border-radius: 20px ;
-        text-decoration:none ;
-        display: flex;
-        justify-content: space-evenly;
-        transition: background .1s ease-out;
-        align-items: center;
-    }
-    #filterByName>div:nth-child(1) img{
-        width: 25px;
-        background-color: transparent;
-        
-    }
-    #header{      
-        width: 55%;
-        height: 60px;
-        font-size: 50px;
-        font-weight: 900;
-        line-height: 48px;
-        color: #333;
-        margin: 0 24px 24px 0;
-        /* border: 2px solid red; */
-        margin: auto;
-        margin-top: 20px;
-        }
-        #container{
-            display: grid;
-            grid-template-columns: 500px 500px;
-            gap: 10px;
-            /* width: 100%; */
-            justify-content: center;
-            margin: auto;
-            font-family: proxima-nova,Helvetica,Arial,sans-serif;
-            margin-top: 30px;
-        }
-        #container>div{
-            margin-bottom: 30px ;
-            width: 95%;
-            height: 350px;
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;            
-            border-radius: 20px;
-            line-height: 30px;
-        }
-        #container>div img{
-            width: 100%;
-            height: 200px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        }
-        #container>div p,h3{
-            padding-left: 20px;
-        }
-</style>
+<link rel="stylesheet" href="./recipe.css">
 <body>
     <div id="upper_section">
         
@@ -158,27 +16,27 @@
             </h1>
             
             <div id="search_panel">
-                <input type="text" id="search_bar" placeholder="Search Recipe">
-                <button onclick="searchMe()" id="search_button">search</button>
+                <input type="text" id="search_bar" placeholder="🔍Search Recipe">
+                <button onclick="searchMe()" id="search_button">Search</button>
             </div>
 
             <p id="para_explore">Can't think of anything? Try these popular tags
             </p>
 
             <div id="filtering">
-                <button id="chinese">Chinese</button>
-                <button id="quick" >Quick & Easy</button>
-                <button id="burger">Burger</button>
-                <button id="des">Desserts</button>
+                <button id="chinese" onclick="China()">Chinese</button>
+                <button id="quick" onclick="Quick()">Quick & Easy</button>
+                <button id="burger" onclick="Burger()">Burger</button>
+                <button id="dess" onclick="Desert()">Desserts</button>
             </div>
 
         </div>
     </div>
         <div id="filterByName">
-            <div id=""><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExLjg4MSAxLjY0M0guNTQ4YS4zMzMuMzMzIDAgMDEtLjMzMy0uMzM0Vi42NDNBLjMzMy4zMzMgMCAwMS41NDguMzA5aDExLjMzM2EuMzMzLjMzMyAwIDAxLjMzNC4zMzR2LjY2NmEuMzMzLjMzMyAwIDAxLS4zMzQuMzM0em0tMS42NjYgMy42NjZ2LS42NjZhLjMzMy4zMzMgMCAwMC0uMzM0LS4zMzRIMi41NDhhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0SDQuNTQ4YS4zMzMuMzMzIDAgMDAtLjMzMy4zMzR2LjY2NmEuMzMzLjMzMyAwIDAwLjMzMy4zMzRoMy4zMzNhLjMzMy4zMzMgMCAwMC4zMzQtLjMzNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMjMuODgxIDEuNjQzSDEyLjU0OGEuMzMzLjMzMyAwIDAxLS4zMzMtLjMzNFYuNjQzYS4zMzMuMzMzIDAgMDEuMzMzLS4zMzRoMTEuMzMzYS4zMzMuMzMzIDAgMDEuMzM0LjMzNHYuNjY2YS4zMzMuMzMzIDAgMDEtLjMzNC4zMzR6bS0xLjY2NiAzLjY2NnYtLjY2NmEuMzMzLjMzMyAwIDAwLS4zMzQtLjMzNGgtNy4zMzNhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0aC0zLjMzM2EuMzMzLjMzMyAwIDAwLS4zMzMuMzM0di42NjZhLjMzMy4zMzMgMCAwMC4zMzMuMzM0aDMuMzMzYS4zMzMuMzMzIDAgMDAuMzM0LS4zMzR6IiBmaWxsPSIjNkY3MzdBIi8+PC9zdmc+" alt=""> All</div>
-            <div id="">Most Popular</div>
-            <div id="">All Special</div>
-            <div id="">All Beverages Recipe</div>
+            <div id="all" onclick="All()"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExLjg4MSAxLjY0M0guNTQ4YS4zMzMuMzMzIDAgMDEtLjMzMy0uMzM0Vi42NDNBLjMzMy4zMzMgMCAwMS41NDguMzA5aDExLjMzM2EuMzMzLjMzMyAwIDAxLjMzNC4zMzR2LjY2NmEuMzMzLjMzMyAwIDAxLS4zMzQuMzM0em0tMS42NjYgMy42NjZ2LS42NjZhLjMzMy4zMzMgMCAwMC0uMzM0LS4zMzRIMi41NDhhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0SDQuNTQ4YS4zMzMuMzMzIDAgMDAtLjMzMy4zMzR2LjY2NmEuMzMzLjMzMyAwIDAwLjMzMy4zMzRoMy4zMzNhLjMzMy4zMzMgMCAwMC4zMzQtLjMzNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMjMuODgxIDEuNjQzSDEyLjU0OGEuMzMzLjMzMyAwIDAxLS4zMzMtLjMzNFYuNjQzYS4zMzMuMzMzIDAgMDEuMzMzLS4zMzRoMTEuMzMzYS4zMzMuMzMzIDAgMDEuMzM0LjMzNHYuNjY2YS4zMzMuMzMzIDAgMDEtLjMzNC4zMzR6bS0xLjY2NiAzLjY2NnYtLjY2NmEuMzMzLjMzMyAwIDAwLS4zMzQtLjMzNGgtNy4zMzNhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0aC0zLjMzM2EuMzMzLjMzMyAwIDAwLS4zMzMuMzM0di42NjZhLjMzMy4zMzMgMCAwMC4zMzMuMzM0aDMuMzMzYS4zMzMuMzMzIDAgMDAuMzM0LS4zMzR6IiBmaWxsPSIjNkY3MzdBIi8+PC9zdmc+" alt=""> All</div>
+            <div id="most" onclick="Most()">Most Popular</div>
+            <div id="spe" onclick="Special()">All Special</div>
+            <div id="recipe" onclick="Bevrages()">All Beverages Recipe</div>
         </div>
     <div id="data_panel">
         <h1 id="header">Popular Recipes
@@ -187,103 +45,4 @@
     <div id="container"></div>
 </body>
 </html>
-
-<script>
-
-let container=document.getElementById('container')
-let data
-// let id;
-let search;
-
-
-// if(search.length===undefined){
-//     search
-// }
-
-let searchMe= async ()=>{
-    // if(!search){
-    //     value="chicken"
-    // }else{
-        search=document.getElementById('search_bar').value
-
-        try{
-            // value=search
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
-            
-            data=await res.json()
-            let actual_data=data.searchResults[0].results
-            console.log('data:', actual_data)
-            appendData(actual_data)
-            // localStorage.setItem('empty','full')
-        }catch(err){
-            console.log(err);
-        }
-    }
-    
-    let arr=document.querySelectorAll('#filtering>button')
-
-    arr.forEach(element => {
-    element.addEventListener('click',func)
-    function func(){
-        search=(element.id)
-        console.log('search:', search)
-        
-        searchMe()
-        // localStorage.setItem('empty','full')
-    }
-});
-
-
-    function appendData(data){
-        container.innerHTML=null
-        data.forEach(element => {
-            let div=document.createElement("div")
-    
-            let img=document.createElement("img")
-            img.src=element.image
-
-            let name=document.createElement("h3")
-            name.innerHTML=element.name
-
-            let rating=document.createElement("p")
-            rating.innerText="4.0 ⭐⭐⭐⭐ 1380 Reviews"
-
-            let calories=document.createElement("p")
-            calories.innerText="⌚30min  🔥295 Calories"
-    
-            div.append(img,name,rating,calories)
-            container.append(div)
-            
-        });
-    }
-
-
-    // let chinese=document.getElementById('chinese')
-    // async function China(){
-    //     try{
-    //         let res=await fetch(`https://api.spoonacular.com/food/search?query=chinese&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
-             
-    //             data=await res.json()
-    //             let actual_data=data.searchResults[0].results
-    //             console.log('data:', actual_data)
-    //             appendData(data)
-    // }catch(err){
-    //     console.log(err);
-    // }
-    // }
-
-
-    // let quick=document.getElementById('quick')
-    // async function Quick(){
-    //     try{
-    //         let res=await fetch(`https://api.spoonacular.com/food/search?query=quick&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
-             
-    //             data=await res.json()
-    //             let actual_data=data.searchResults[0].results
-    //             console.log('data:', actual_data)
-    //             appendData(data)
-    // }catch(err){
-    //     console.log(err);
-    // }
-    // }
-</script>
+<script src="./recipe.js"></script>
