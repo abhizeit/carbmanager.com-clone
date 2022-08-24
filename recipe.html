@@ -9,6 +9,7 @@
 <style>
     *{
         margin: 0px;
+        
     }
     #upper_section{
         border: 2px solid red;
@@ -19,11 +20,13 @@
         background-color: rgb(204, 208, 208);
         background-size:cover;
         align-items:center;
+        background-color: #F6F6F6;
+
     }
     #explore{
         /* color: white; */
         /* font-size: 50px; */
-        border: 2px solid red;
+        /* border: 2px solid red; */
         width: 100%;
         margin: auto;
         /* font-weight: bolder; */
@@ -37,7 +40,7 @@
     }
     #search{
         width:40%;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         margin: 5px auto;
         height: 400px;
         /* line-height: 50px; */
@@ -51,7 +54,7 @@
         height: 50px;
         border-radius: 50px;
         padding: 0 40px 0 40px;
-        border: 2px solid red;
+        /* border: 2px solid red; */
     }
     #para_explore{
         box-sizing: border-box;
@@ -73,25 +76,28 @@
     }
     #filterByName{
         display: flex;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         justify-content: space-evenly;
         color:#6f737a;
-        font-size: 25px;
-        width: 60%;
+        font-size: 20px;
+        width: 80%;
         align-items: center;
         margin: auto;
-        text-decoration: underline;
+        /* text-decoration: underline; */
         text-align: center;
         margin-top: 20px;
+        /* background-color: #F6F6F6; */
+
     }
     #filterByName>div:nth-child(1){
-        border: 2px solid red;
-        background-color: white;
+        /* border: 2px solid red; */
+        /* background-color: white; */
         -webkit-tap-highlight-color: rgba(0,0,0,0);
-        width: 10%;
-        height: 50px;
+        width: 5%;
+        padding: 0px;
+        height: 30px;
         color:#6f737a;
-        border-radius: 30px ;
+        border-radius: 20px ;
         text-decoration:none ;
         display: flex;
         justify-content: space-evenly;
@@ -99,25 +105,49 @@
         align-items: center;
     }
     #filterByName>div:nth-child(1) img{
-        width: 40px;
+        width: 25px;
         background-color: transparent;
-    }
-    #header{
         
-        width: 60%;
+    }
+    #header{      
+        width: 55%;
         height: 60px;
         font-size: 50px;
         font-weight: 900;
         line-height: 48px;
         color: #333;
         margin: 0 24px 24px 0;
-        border: 2px solid red;
+        /* border: 2px solid red; */
         margin: auto;
         margin-top: 20px;
         }
-    /* #data_panel{
-
-    } */
+        #container{
+            display: grid;
+            grid-template-columns: 500px 500px;
+            gap: 10px;
+            /* width: 100%; */
+            justify-content: center;
+            margin: auto;
+            font-family: proxima-nova,Helvetica,Arial,sans-serif;
+            margin-top: 30px;
+        }
+        #container>div{
+            margin-bottom: 30px ;
+            width: 95%;
+            height: 350px;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;            
+            border-radius: 20px;
+            line-height: 30px;
+        }
+        #container>div img{
+            width: 100%;
+            height: 200px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        }
+        #container>div p,h3{
+            padding-left: 20px;
+        }
 </style>
 <body>
     <div id="upper_section">
@@ -132,7 +162,7 @@
                 <button onclick="searchMe()" id="search_button">search</button>
             </div>
 
-            <p id="para_explore">Cant think of anything? Try these popular tags
+            <p id="para_explore">Can't think of anything? Try these popular tags
             </p>
 
             <div id="filtering">
@@ -153,50 +183,91 @@
     <div id="data_panel">
         <h1 id="header">Popular Recipes
         </h1>
-        <div id="container"></div>
     </div>
+    <div id="container"></div>
 </body>
 </html>
 
 <script>
 
+let container=document.getElementById('container')
 let data
 let id;
-    let searchMe=async ()=>{
+let search;
+
+let arr=document.getElementById('search_button')
+
+// arr.forEach(element => {
+//     element.addEventListener('click',func)
+//     function func(){
+//         query=element.id
+//         searchMe()
+//         localStorage.setItem('empty','full')
+//     }
+// });
+
+
+
+    let searchMe= async ()=>{
         try{
-            let search=document.getElementById('search_bar').value
+            search=document.getElementById('search_bar').value
 
 
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=50&apiKey=bf73805e3a3948d89d77126780b67235`)
-            let data=await res.json()
-            let actual_data=data.searchResults
-            console.log('data:', actual_data[0].results)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
+
+            data=await res.json()
+            console.log('data:', data.searchResults[0].results)
+
+            
+
+            // let actual_data=data
+
+            // console.log('data:', actual_data)
+            appendData(data)
 
         }catch(err){
-            container.innerHTML=null
+            console.log(err);
         }
     }
-    searchMe()
+    // searchMe()
 
     function appendData(data){
-        data.forEach(element => {
+        container.innerHTML=null
+        data.searchResults[0].results.forEach(element => {
             let div=document.createElement("div")
-            
     
             let img=document.createElement("img")
             img.src=element.image
 
             // img.style.height="100px";
             // img.style.width="100px"
-            let name=document.createElement("h5")
-            h.innerText=element.name
+            let name=document.createElement("h3")
+            name.innerHTML=element.name
 
             let rating=document.createElement("p")
-            rating.innerText=
-            div.append(img,name)
+            rating.innerText="4.0 ⭐⭐⭐⭐ 1380 Reviews"
+
+            let calories=document.createElement("p")
+            calories.innerText="⌚30min  🔥295 Calories"
+    
+            div.append(img,name,rating,calories)
             container.append(div)
-            // container.style.display="grid"
-            // container.style.gridTemplateRows="200px, 200px,"
+            
         });
     }
+
+
+
+
+    let home=document.querySelector('search_button').addEventListener('click',function(){
+    localStorage.setItem('empty','empty')
+})
+
+let empty = localStorage.getItem('empty')
+if(empty=='full'){
+    console.log('empty');
+}else{
+    query='in'
+    searchMe()
+}
 </script>
