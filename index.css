@@ -1,20 +1,19 @@
-/* * {
+body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-} */
+}
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 #navbar {
     display: flex;
     justify-content: space-evenly;
     color: white;
-    background-color: rgb(113, 213, 151);
+    background-color: rgb(36,187,136);
     position: sticky;
     top: 0.1px;
-    z-index: 10;
+    z-index: 100;
     padding: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -30,7 +29,7 @@
 #navbar h3:nth-child(10) {
     border: 1px solid white;
     background-color: white;
-    color: rgb(113, 213, 151);
+    color: rgb(36,187,136);
     border-radius: 40px;
     height: 40px;
     width: 130px;
@@ -44,7 +43,7 @@
 #navbar2 {
     display: flex;
     justify-content: space-evenly;
-    background-color: rgb(113, 213, 151);
+    background-color: rgb(36,187,136);
     padding: 100px;
     color: white;
     border-radius: 0px 0px 0px 350px;
@@ -52,7 +51,7 @@
 }
 
 #navbar2 img:nth-child(1) {
-    width: 200px;
+    width: 150px;
     height: 60px;
     margin-top: 5%;
 }
@@ -93,7 +92,7 @@
     display: flex;
     border: 1px solid black;
     border-radius: 40px;
-    background-color: red;
+    background-color: rgb(252,70,66);
     height: 100%;
     width: 240px;
     padding: 0px 10px;
@@ -108,7 +107,7 @@
 }
 
 #images_flex img {
-    width: 110px;
+    width: 90px;
     height: 50px;
 }
 
@@ -132,7 +131,7 @@
 }
 
 #keto span {
-    color: rgb(84, 199, 128);
+    color: rgb(36,187,136);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -173,7 +172,7 @@
 }
 
 #keto_you>div>h1>span:nth-child(2) {
-    color: rgb(105, 241, 105);
+    color: rgb(36,187,136);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -183,7 +182,7 @@
     z-index: -1;
     height: 200px;
     width: 200px;
-    background-color: rgb(59, 176, 104);
+    background-color: rgb(36,187,136);
     margin-left: -20px;
     border-radius: 10px;
 }
@@ -271,7 +270,7 @@
     z-index: -1;
     height: 200px;
     width: 200px;
-    background-color: rgb(208, 170, 15);
+    background-color: rgb(253,161,32);
     border-radius: 10px;
 }
 
@@ -336,11 +335,11 @@
 
 #keto_life .position {
     position: absolute;
-    bottom: 470px;
+    bottom: 455px;
     z-index: -1;
     height: 200px;
     width: 200px;
-    background-color: rgb(239, 47, 53);
+    background-color: rgb(249,70,66);
     border-radius: 10px;
 }
 
@@ -382,7 +381,7 @@
 }
 
 #keto_beyond>div>h1>span:nth-child(2) {
-    color: rgb(105, 241, 105);
+    color: rgb(55, 224, 120);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -413,7 +412,7 @@ h5 {
 }
 
 .easy span {
-    color: rgb(93, 206, 93);
+    color: rgb(36,187,136);
     font-size: 19px;
 }
 
@@ -443,19 +442,29 @@ h5 {
 #middle>div:nth-child(1)>i:nth-child(1) {
     border: 1px solid white;
     border-radius: 50%;
-    color: red;
+    color: rgb(249,70,66);
     padding: 23px;
     background-color: rgb(229, 199, 199);
     font-size: 28px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #middle>div:nth-child(1)>i:nth-child(4) {
     border: 1px solid white;
     border-radius: 50%;
-    color: goldenrod;
+    color: rgb(213,116,16);
     padding: 23px;
     background-color: rgb(229, 199, 199);
     font-size: 28px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #middle>div:nth-child(3)>i:nth-child(1) {
@@ -465,6 +474,11 @@ h5 {
     padding: 23px;
     background-color: rgb(204, 226, 246);
     font-size: 28px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #middle>div:nth-child(3)>i:nth-child(4) {
@@ -474,6 +488,11 @@ h5 {
     padding: 23px;
     background-color: rgb(229, 231, 233);
     font-size: 28px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #middle h4 {
@@ -571,7 +590,7 @@ h5 {
 #father>div:nth-child(1)>i {
     padding: 20px;
     background-color: rgb(215, 207, 212);
-    color: red;
+    color: rgb(249,70,66);
     font-size: 30px;
     border-radius: 50%;
 }
@@ -587,7 +606,7 @@ h5 {
 #father>div:nth-child(3)>i {
     padding: 20px;
     background-color: rgb(235, 250, 185);
-    color: goldenrod;
+    color: rgb(213,116,16);
     font-size: 30px;
     border-radius: 50%;
 }
@@ -622,11 +641,11 @@ h5 {
 }
 
 #web img {
-    width: 100%;
+    width: 90%;
 }
 
 #web i {
-    color: rgb(226, 148, 31);
+    color: rgb(253,161,32);
     margin-top: 5px;
 }
 
@@ -648,6 +667,11 @@ h5 {
     border-radius: 50%;
     padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #crauser_img button:nth-child(4) {
@@ -659,7 +683,7 @@ h5 {
 }
 
 #crauser_img {
-    background-color: rgb(4, 168, 135);
+    background-color: rgb(28,166,119);
     width: 100%;
     text-align: center;
     color: white;
@@ -686,6 +710,11 @@ h5 {
     color: black;
     padding: 20px;
     font-size: 23px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #crauser_img>div>a:nth-child(1)>i:hover {
@@ -848,7 +877,7 @@ i+span {
 
 #Explore_Foods+button,
 #low_carb button {
-    background-color: rgb(68, 153, 68);
+    background-color: rgb(27,201,142);
     font-size: 20px;
     padding: 15px;
     width: 230px;
@@ -868,20 +897,21 @@ i+span {
 #low_carb {
     margin: 5% 0;
     position: relative;
+    border: 10px solid gray;
 }
 
 #low_carb img {
     width: 100%;
-    z-index: 4;
+    height: 450px;
+    z-index: -1;
     filter: blur(10px);
 }
-
 #low_carb div {
     position: absolute;
-    top: 40%;
-    left: 9%;
-    font-size: 25px;
-    z-index: 100;
+    top: 20%;
+    left: 13%;
+    font-size: 20px;
+    z-index: 2;
     color: white;
     text-align: center;
 }
@@ -906,13 +936,13 @@ i+span {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    width: 80%;
+    width: 75%;
     margin: auto;
 }
 
 #Explore_More_Recipes img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     background-color: rgb(100, 100, 100, 0.1);
     border-radius: 20px;
 }
@@ -929,6 +959,7 @@ i+span {
     position: absolute;
     z-index: 5;
     top: 40%;
+    left: 10%;
     color: white;
     font-size: 25px;
     width: 260px;
@@ -949,7 +980,7 @@ i+span {
     border: none;
     border-radius: 40px;
     color: white;
-    background-color: rgb(12, 180, 121);
+    background-color: rgb(34,182,131);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -980,7 +1011,7 @@ i+span {
 #premium>div:nth-child(2) {
     width: 100%;
     height: 400px;
-    background-color: rgb(12, 180, 121);
+    background-color: rgb(34,182,131);
 }
 
 #premium h1 {
@@ -988,7 +1019,7 @@ i+span {
 }
 
 #premium button {
-    background-color: rgb(198, 33, 33);
+    background-color: rgb(249,70,66);
     padding: 15px;
     font-size: 20px;
     border: none;
@@ -1069,6 +1100,8 @@ hr {
     padding: 15px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     color: rgb(82, 80, 80);
+    width: 25px;
+    height: 25px;
 }
 
 #footer2>a:nth-child(1)>i:hover {
@@ -1105,7 +1138,9 @@ hr {
     border: none;
     border-radius: 50%;
     padding: 3px;
-    background-color: rgb(12, 180, 121);
+    background-color: rgb(36,187,135);
+    width: 50px;
+    height: 50px;
 }
 
 .easy8 i {
@@ -1142,10 +1177,36 @@ hr {
 
 
 
+
 @media all and (min-width:481px) and (max-width:768px) {
+    body{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    #navbar{
+        width: 100%;
+    }
+
+    #navbar h3{
+        width: 0;
+    }
+
     #navbar2 {
         display: flex;
         flex-direction: column;
+    }
+
+    #navbar2>div>h1 {
+        font-size: 40px;
+        width: 600px;
+        line-height: 45px;
+    }
+    #navbar2 img:nth-child(1){
+        width: 150px;
+        height: 50px;
+        margin: 10% 0;
     }
 
     #navbar2 img {
@@ -1155,13 +1216,23 @@ hr {
 
     #images_flex {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 80px);
         gap: 20px;
+    }
+    #keto h1 {
+        font-size: 25px;
+        margin-bottom: 10%;
+    }
+    #keto h3{
+        font-size: 15px;
     }
 
     #keto_you {
         display: flex;
         flex-direction: column;
+    }
+    #keto_you h1{
+        font-size: 32px;
     }
 
     .ulflex {
@@ -1260,11 +1331,12 @@ hr {
     }
 
     .easy h1 {
-        font-size: 36px;
+        font-size: 30px;
+        margin-bottom: -2%;
     }
 
     .easy h5 {
-        font-size: 23px;
+        font-size: 17px;
     }
 
     #middle {
@@ -1279,11 +1351,16 @@ hr {
     }
 
     #middle p {
-        line-height: 40px;
+        line-height: 30px;
+        width: 500px;
+        font-size: 15px;
     }
 
     #middle>div {
         width: 50%;
+    }
+    .Connect h2{
+        font-size: 25px;
     }
 
     .div {
@@ -1296,7 +1373,7 @@ hr {
     }
 
     .div p {
-        font-size: 23px;
+        font-size: 16px;
         line-height: 30px;
     }
 
@@ -1306,6 +1383,9 @@ hr {
 
     .div div:nth-child(1) {
         margin-top: 10%;
+    }
+    .easy1>h1{
+        font-size: 23px;
     }
 
     #father {
@@ -1322,9 +1402,10 @@ hr {
 
     .easy1 p {
         line-height: 30px;
+        width: 600px;
+        margin-left: 7%;
     }
-
-    #web {
+    #web img{
         width: 100%;
     }
 
@@ -1333,11 +1414,11 @@ hr {
     }
 
     #crauser_img img {
-        width: 100%;
+        width: 85%;
     }
 
     #crauser_img p {
-        width: 50%;
+        width: 60%;
         margin-top: 15px;
     }
 
@@ -1351,6 +1432,12 @@ hr {
 
     #crauser_img a:hover {
         padding-top: 2px;
+    }
+    .easy3 h1{
+        font-size: 29px;
+    }
+    .easy3 p{
+        font-size: 17px;
     }
 
     #Trending_Recipes {
@@ -1373,7 +1460,7 @@ hr {
 
     #low_carb div {
         top: 4%;
-        z-index: 120;
+        z-index: 3;
     }
 
     #Explore_Foods+button {
@@ -1382,6 +1469,12 @@ hr {
 
     .easy5 {
         margin: 10% auto;
+    }
+    .easy5 h1{
+        font-size: 30px;
+    }
+    #premium>div:nth-child(2){
+        height: 500px;
     }
 
     #Explore_More_Recipes {
@@ -1421,7 +1514,11 @@ hr {
 
     hr {
         color: rgb(206, 202, 202);
-        margin: 6% 0;
+        margin: 6% 0 6% 12%;
+    }
+    #footer2 {
+        display: flex;
+        gap: 20px;
     }
 }
 
@@ -1429,7 +1526,7 @@ hr {
 
 
 
-@media all and (min-width:320px) and (max-width:480px) {
+@media all and (min-width:360px) and (max-width:640px) {
     #navbar2 {
         display: flex;
         flex-direction: column;
