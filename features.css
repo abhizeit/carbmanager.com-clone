@@ -276,14 +276,211 @@ nav {
   text-align: center;
 }
 .cards {
+  text-align: justify;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-row-gap: 20px;
 }
 .cards > div {
+  padding: 20px 10px;
   border: 1px solid black;
   border-radius: 5px;
   width: 90%;
   height: 400px;
   margin: auto;
+}
+.icons > i {
+  font-size: 2rem;
+  border: 3px solid #1ed2a0;
+  padding: 15px;
+  border-radius: 50px;
+  margin: 10px 20px;
+  color: #ff5e00;
+}
+.cards h3 {
+  margin: 30px auto;
+}
+.cards p {
+  margin: 10px auto;
+}
+@media screen and (max-width: 770px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 520px) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Css for marcos box, food tracker */
+#marcos,
+#food,
+#recipes,
+#meal,
+#keto,
+#community,
+#exercise,
+#insight {
+  width: 95vw;
+  height: 90vh;
+  /* border: 1px solid red; */
+  margin: 10rem auto 4rem;
+  display: flex;
+}
+#marcos > div,
+#food > div,
+#recipes > div,
+#meal > div,
+#keto > div,
+#community > div,
+#exercise > div,
+#insight > div {
+  width: 47%;
+  height: 100%;
+  margin: auto;
+  padding: 15px;
+  /* border: 1px solid black; */
+}
+#chart h1,
+#board h1,
+#book h1,
+#check h1,
+#cap h1,
+#comments h1,
+#dumbbell h1,
+#line h1 {
+  margin: 2rem 0;
+}
+#chart p,
+#board p,
+#book p,
+#check p,
+#cap p,
+#comments p,
+#dumbbell p,
+#line p {
+  margin: 10px 0 1rem;
+}
+.layout {
+  /* border: 2px solid green; */
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 50%;
+  position: relative;
+  border: 8rem;
+  left: 6rem;
+}
+@media screen and (max-width: 770px) {
+  #marcos,
+  #food,
+  #recipes,
+  #meal,
+  #keto,
+  #community,
+  #exercise,
+  #insight {
+    flex-direction: column;
+    margin-bottom: 30rem;
+  }
+  #marcos > div,
+  #food > div,
+  #recipes > div,
+  #meal > div,
+  #keto > div,
+  #community > div,
+  #exercise > div,
+  #insight > div {
+    width: 100%;
+    padding: 4rem;
+  }
+  .layout {
+    border-radius: 20px;
+    border-bottom: 1px solid #6c7174;
+  }
+}
+@media screen and (max-width: 440px) {
+  .layout {
+    top: 13rem;
+    right: 10rem;
+  }
+}
+
+/* CSS for Premium Page */
+#premium {
+  width: 100vw;
+  /* border: 1px solid red; */
+  margin: 10rem 0 5rem 0;
+  padding: 10rem 0;
+  text-align: center;
+  background: #1ed2a0;
+  color: rgb(255, 255, 255);
+}
+#premium span {
+  background: #ff302b;
+}
+#premium span a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff302b;
+  padding: 13px 20px;
+  border-radius: 70px;
+}
+footer {
+  width: 100vw;
+  height: auto;
+}
+.logon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 8vh;
+}
+.logon > img {
+  width: 3%;
+  border: 1px solid #7499fa;
+  border-radius: 5px;
+}
+#foot-list {
+  width: 90%;
+  border-bottom: 0.5px solid gray;
+  margin: auto;
+}
+.lis {
+  width: 90%;
+  margin: auto;
+  padding: 5px 0 10px;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+.lis li a {
+  text-decoration: none;
+  color: #111;
+}
+.lis li a:hover {
+  color: #1ed2a0;
+}
+#foot {
+  width: 20vw;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+#foot > div {
+  font-size: 1.5rem;
+  padding: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  border-radius: 50px;
+}
+footer > p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.rights {
+  width: 80%;
+  margin: 0 auto 2rem;
+  text-align: center;
 }
