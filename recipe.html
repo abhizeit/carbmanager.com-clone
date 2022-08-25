@@ -5,150 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
-<style>
-    *{
-        margin: 0px;
-        
-    }
-    #upper_section{
-        border: 2px solid red;
-        height: 600px;
-        display: grid;
-        position:relative;
-        background-image:url(https://burst.shopifycdn.com/photos/finger-food-and-drinks-on-dark-wood.jpg?width=925&format=pjpg&exif=1&iptc=1);
-        background-color: rgb(204, 208, 208);
-        background-size:cover;
-        align-items:center;
-        background-color: #F6F6F6;
-
-    }
-    #explore{
-        /* color: white; */
-        /* font-size: 50px; */
-        /* border: 2px solid red; */
-        width: 100%;
-        margin: auto;
-        /* font-weight: bolder; */
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 48px;
-        font-weight: 400;
-        line-height: 48px;
-        color: #fff;
-        line-height: 60px;
-        margin-bottom: 40px;
-    }
-    #search{
-        width:40%;
-        /* border: 2px solid red; */
-        margin: 5px auto;
-        height: 400px;
-        /* line-height: 50px; */
-    }
-    ::-webkit-input-placeholder{
-        text-align: left;
-    }
-    #search_bar{
-        width: 88%;
-        text-align: center;
-        height: 50px;
-        border-radius: 50px;
-        padding: 0 40px 0 40px;
-        /* border: 2px solid red; */
-    }
-    #para_explore{
-        box-sizing: border-box;
-        font-size: 18px;
-        font-weight: 700;        
-        line-height: 3rem;
-        color: #fff;
-        margin-bottom: 1rem;
-    }
-    #filtering>button{
-        border-radius: 20px;
-        width: 15%;
-        background-color: rgb(208, 208, 208);
-        height: 40px;
-        opacity: 60%;
-        color: #fff;
-        font-size: 15px;
-        font-weight: bolder;
-    }
-    #filterByName{
-        display: flex;
-        /* border: 2px solid red; */
-        justify-content: space-evenly;
-        color:#6f737a;
-        font-size: 20px;
-        width: 80%;
-        align-items: center;
-        margin: auto;
-        /* text-decoration: underline; */
-        text-align: center;
-        margin-top: 20px;
-        /* background-color: #F6F6F6; */
-
-    }
-    #filterByName>div:nth-child(1){
-        /* border: 2px solid red; */
-        /* background-color: white; */
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        width: 5%;
-        padding: 0px;
-        height: 30px;
-        color:#6f737a;
-        border-radius: 20px ;
-        text-decoration:none ;
-        display: flex;
-        justify-content: space-evenly;
-        transition: background .1s ease-out;
-        align-items: center;
-    }
-    #filterByName>div:nth-child(1) img{
-        width: 25px;
-        background-color: transparent;
-        
-    }
-    #header{      
-        width: 55%;
-        height: 60px;
-        font-size: 50px;
-        font-weight: 900;
-        line-height: 48px;
-        color: #333;
-        margin: 0 24px 24px 0;
-        /* border: 2px solid red; */
-        margin: auto;
-        margin-top: 20px;
-        }
-        #container{
-            display: grid;
-            grid-template-columns: 500px 500px;
-            gap: 10px;
-            /* width: 100%; */
-            justify-content: center;
-            margin: auto;
-            font-family: proxima-nova,Helvetica,Arial,sans-serif;
-            margin-top: 30px;
-        }
-        #container>div{
-            margin-bottom: 30px ;
-            width: 95%;
-            height: 350px;
-            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;            
-            border-radius: 20px;
-            line-height: 30px;
-        }
-        #container>div img{
-            width: 100%;
-            height: 200px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        }
-        #container>div p,h3{
-            padding-left: 20px;
-        }
-</style>
+<link rel="stylesheet" href="./recipe.css">
 <body>
     <div id="upper_section">
         
@@ -157,117 +19,138 @@
                 Explore Over 50,000+ Unique Low-Carb and Keto Recipes
             </h1>
             
-            <div id="search_panel">
-                <input type="text" id="search_bar" placeholder="Search Recipe">
-                <button onclick="searchMe()" id="search_button">search</button>
+            <!-- <div id="search_panel">
+                <input type="text" id="search_bar" placeholder="🔍Search Recipe">
+                <button onclick="searchMe()" id="search_button">Search</button>
+            </div> -->
+
+            <div id="search_panel" class="flex">
+                <input type="text" id="search_bar" placeholder="🔍Search Recipe">
+                <button onclick="searchMe()" id="search_button">Search</button>
             </div>
 
             <p id="para_explore">Can't think of anything? Try these popular tags
             </p>
 
             <div id="filtering">
-                <button id="">Chinese</button>
-                <button id="">Quick & Easy</button>
-                <button id="">Burger</button>
-                <button id="">Desserts</button>
+                <button id="chinese" onclick="China()">Chinese</button>
+                <button id="quick" onclick="Quick()">Quick & Easy</button>
+                <button id="burger" onclick="Burger()">Burger</button>
+                <button id="dess" onclick="Desert()">Desserts</button>
             </div>
 
         </div>
     </div>
         <div id="filterByName">
-            <div id=""><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExLjg4MSAxLjY0M0guNTQ4YS4zMzMuMzMzIDAgMDEtLjMzMy0uMzM0Vi42NDNBLjMzMy4zMzMgMCAwMS41NDguMzA5aDExLjMzM2EuMzMzLjMzMyAwIDAxLjMzNC4zMzR2LjY2NmEuMzMzLjMzMyAwIDAxLS4zMzQuMzM0em0tMS42NjYgMy42NjZ2LS42NjZhLjMzMy4zMzMgMCAwMC0uMzM0LS4zMzRIMi41NDhhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0SDQuNTQ4YS4zMzMuMzMzIDAgMDAtLjMzMy4zMzR2LjY2NmEuMzMzLjMzMyAwIDAwLjMzMy4zMzRoMy4zMzNhLjMzMy4zMzMgMCAwMC4zMzQtLjMzNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMjMuODgxIDEuNjQzSDEyLjU0OGEuMzMzLjMzMyAwIDAxLS4zMzMtLjMzNFYuNjQzYS4zMzMuMzMzIDAgMDEuMzMzLS4zMzRoMTEuMzMzYS4zMzMuMzMzIDAgMDEuMzM0LjMzNHYuNjY2YS4zMzMuMzMzIDAgMDEtLjMzNC4zMzR6bS0xLjY2NiAzLjY2NnYtLjY2NmEuMzMzLjMzMyAwIDAwLS4zMzQtLjMzNGgtNy4zMzNhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0aC0zLjMzM2EuMzMzLjMzMyAwIDAwLS4zMzMuMzM0di42NjZhLjMzMy4zMzMgMCAwMC4zMzMuMzM0aDMuMzMzYS4zMzMuMzMzIDAgMDAuMzM0LS4zMzR6IiBmaWxsPSIjNkY3MzdBIi8+PC9zdmc+" alt=""> All</div>
-            <div id="">Most Popular</div>
-            <div id="">All Special</div>
-            <div id="">All Beverages Recipe</div>
+            <div id="all" onclick="All()"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjUgMTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTExLjg4MSAxLjY0M0guNTQ4YS4zMzMuMzMzIDAgMDEtLjMzMy0uMzM0Vi42NDNBLjMzMy4zMzMgMCAwMS41NDguMzA5aDExLjMzM2EuMzMzLjMzMyAwIDAxLjMzNC4zMzR2LjY2NmEuMzMzLjMzMyAwIDAxLS4zMzQuMzM0em0tMS42NjYgMy42NjZ2LS42NjZhLjMzMy4zMzMgMCAwMC0uMzM0LS4zMzRIMi41NDhhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0SDQuNTQ4YS4zMzMuMzMzIDAgMDAtLjMzMy4zMzR2LjY2NmEuMzMzLjMzMyAwIDAwLjMzMy4zMzRoMy4zMzNhLjMzMy4zMzMgMCAwMC4zMzQtLjMzNHoiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNMjMuODgxIDEuNjQzSDEyLjU0OGEuMzMzLjMzMyAwIDAxLS4zMzMtLjMzNFYuNjQzYS4zMzMuMzMzIDAgMDEuMzMzLS4zMzRoMTEuMzMzYS4zMzMuMzMzIDAgMDEuMzM0LjMzNHYuNjY2YS4zMzMuMzMzIDAgMDEtLjMzNC4zMzR6bS0xLjY2NiAzLjY2NnYtLjY2NmEuMzMzLjMzMyAwIDAwLS4zMzQtLjMzNGgtNy4zMzNhLjMzMy4zMzMgMCAwMC0uMzMzLjMzNHYuNjY2YS4zMzMuMzMzIDAgMDAuMzMzLjMzNGg3LjMzM2EuMzMzLjMzMyAwIDAwLjMzNC0uMzM0em0tMiA0di0uNjY2YS4zMzMuMzMzIDAgMDAtLjMzNC0uMzM0aC0zLjMzM2EuMzMzLjMzMyAwIDAwLS4zMzMuMzM0di42NjZhLjMzMy4zMzMgMCAwMC4zMzMuMzM0aDMuMzMzYS4zMzMuMzMzIDAgMDAuMzM0LS4zMzR6IiBmaWxsPSIjNkY3MzdBIi8+PC9zdmc+" alt=""> All</div>
+            <div id="most" onclick="Most()">Most Popular</div>
+            <div id="spe" onclick="Special()">All Special</div>
+            <div id="recipe" onclick="Bevrages()">All Beverages Recipe</div>
         </div>
     <div id="data_panel">
         <h1 id="header">Popular Recipes
         </h1>
     </div>
     <div id="container"></div>
+
+
+
+
+
+<!-- ===========footer=============== -->
+
+
+
+    <div id="premium">
+        <div>
+            <h1>Looking for Premium?</h1>
+            <p>Unlock all of Carb Manager's cutting-edge features with a Premium Membership.</p>
+            <button onclick="premium()">
+                <i class="fas fa-trophy"></i>
+                <span>Get Premium</span>
+            </button>
+        </div>
+        <div></div>
+    </div>
+
+    <div class="easy6">
+        <img src="https://play-lh.googleusercontent.com/LI_Y6I6uMS_DrhO7tHDTH-_YaYLJLM3rS9yReRuGzbk8VfoZvkOlZh7zZfCCOakJGDs"
+            alt="logo">
+        <p>Carb Manager <sup>&reg;</sup></p>
+    </div>
+
+    <div id="footer_final">
+        <div id="footer">
+            <div>
+                <a href="https://www.carbmanager.com/feature-summary">Features</a>
+            </div>
+            <div>
+                <a href="premium.html">Premium</a>
+            </div>
+            <div>
+                <a href="https://www.carbmanager.com/recipes">Keto Recipes</a>
+            </div>
+            <div>
+                <a href="https://www.carbmanager.com/cookbook">Keto Cookbook</a>
+            </div>
+            <div>
+                <a href="https://www.carbmanager.com/articles">Articles</a>
+            </div>
+            <div>
+                <a href="https://www.carbmanager.com/about-us">About Us</a>
+            </div>
+            <div>
+                <a href="https://www.carbmanager.com/food-index">Foods</a>
+            </div>
+            <div>
+                <a href="https://help.carbmanager.com/">Supports</a>
+            </div>
+            <div>
+                <a href="login.html">Log In</a>
+            </div>
+            <div>
+                <a href="signup.html">Join for Free</a>
+            </div>
+        </div>
+    
+        <div id="footer1">
+            <div>Gift Cards</div>
+            <div>Support Center</div>
+            <div>Forums</div>
+            <div>Terms Of Service
+            </div>
+            <div>Privacy Policy</div>
+            <div>Contact</div>
+            <div>System Status</div>
+        </div>
+    </div>
+    
+    <hr>
+    <div id="footer2">
+        <a target="_blank" href="https://www.facebook.com/carbmanager">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/carbmanagerapp/">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a target="_blank" href="https://www.pinterest.com/carbmanagerapp/">
+            <i class="fa-brands fa-pinterest"></i>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/channel/UCmVTbl7NTm_Cd4rA8XJWUVw?sub_confirmation=1">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+    </div>
+ <!-- ======================Footer====================        -->
+    <div class="easy7">
+        <p><span>&copy;</span>2010-2022 Wombat Apps LLC. All Rights Reserved.</p>
+        <p>Carb Manager's content is for informational and educational purposes only. Our website is not intended to be a substitute for professional medical advice, diagnosis, or treatment.</p>
+    </div>
+    <a class="Top" href="#top">
+        <button class="easy8">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </a>
+
 </body>
 </html>
-
-<script>
-
-let container=document.getElementById('container')
-let data
-let id;
-let search;
-
-let arr=document.getElementById('search_button')
-
-// arr.forEach(element => {
-//     element.addEventListener('click',func)
-//     function func(){
-//         query=element.id
-//         searchMe()
-//         localStorage.setItem('empty','full')
-//     }
-// });
-
-
-
-    let searchMe= async ()=>{
-        try{
-            search=document.getElementById('search_bar').value
-
-
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=30&apiKey=bf73805e3a3948d89d77126780b67235`)
-
-            data=await res.json()
-            console.log('data:', data.searchResults[0].results)
-
-            
-
-            // let actual_data=data
-
-            // console.log('data:', actual_data)
-            appendData(data)
-
-        }catch(err){
-            console.log(err);
-        }
-    }
-    // searchMe()
-
-    function appendData(data){
-        container.innerHTML=null
-        data.searchResults[0].results.forEach(element => {
-            let div=document.createElement("div")
-    
-            let img=document.createElement("img")
-            img.src=element.image
-
-            // img.style.height="100px";
-            // img.style.width="100px"
-            let name=document.createElement("h3")
-            name.innerHTML=element.name
-
-            let rating=document.createElement("p")
-            rating.innerText="4.0 ⭐⭐⭐⭐ 1380 Reviews"
-
-            let calories=document.createElement("p")
-            calories.innerText="⌚30min  🔥295 Calories"
-    
-            div.append(img,name,rating,calories)
-            container.append(div)
-            
-        });
-    }
-
-
-
-
-    let home=document.querySelector('search_button').addEventListener('click',function(){
-    localStorage.setItem('empty','empty')
-})
-
-let empty = localStorage.getItem('empty')
-if(empty=='full'){
-    console.log('empty');
-}else{
-    query='in'
-    searchMe()
-}
-</script>
+<script src="./recipe.js"></script>
