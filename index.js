@@ -20,3 +20,16 @@ left_btn.addEventListener("click", function () {
     }
     image.setAttribute("src", imageLink[count]);
 });
+
+function viewAllFunc() {
+    window.location.href = "view.html";
+}
+function signup() {
+    window.location.href = "signup.html";
+}
+function ViewAllRecipes() {
+    window.location.href = "viewRecipes.html";
+}
+function premium() {
+    window.location.href = "premium.html";
+}
