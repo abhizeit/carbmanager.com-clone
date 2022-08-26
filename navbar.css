@@ -1,3 +1,6 @@
+/* this file is updated */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +8,8 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+
+
 /* body {
   height: 200vh;
   border: 1px solid red;
@@ -32,6 +37,8 @@ nav {
   width: fit-content;
   /* justify-content: space-around; */
 }
+
+
 .logo-container:hover {
   opacity: 0.85;
 }
@@ -46,6 +53,10 @@ nav {
   font-size: 1.5rem;
   font-weight: 300;
 }
+
+
+
+
 .menu {
   display: flex;
   /* border: 1px solid red; */
@@ -133,6 +144,9 @@ nav {
     padding: 0.5rem;
     /* border: 1px solid black; */
   }
+
+
+  
   .mobile-menu .menu li a {
     color: black;
   }
