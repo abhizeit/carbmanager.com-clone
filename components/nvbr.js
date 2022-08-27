@@ -17,8 +17,8 @@ function nvbr() {
         <div class="cancel-btn"><i class="fas fa-times"></i></div>
       </ul>
       <!-- 3rd -->
-      <div class="access-btn">
-        <span><a href="login.html">Log In</a></span>
+      <div id="nav" class="access-btn">
+        <span><a href="login.html" id="log">Log In</a></span>
         <div id="logout">
         <p>logout</p>
         </div>
@@ -42,9 +42,8 @@ function nvbr() {
       <div class="cancel-btn"><i class="fas fa-times"></i></div>
     </ul>
     <!-- 3rd -->
-    <div class="access-btn">
-      <span><a href="#">Log In</a></span>
-      <span><a href="#" id="join">Join For Free</a></span>
+    <div class="access-btn mobile-access-btn">
+      
     </div>
   </div>`;
 }
