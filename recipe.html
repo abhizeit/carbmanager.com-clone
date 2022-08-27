@@ -12,6 +12,7 @@
 </head>
 <link rel="stylesheet" href="./recipe.css">
 <body>
+    <div id="navbarFromGulam"></div>
     <div id="upper_section">
         
         <div id="search">
@@ -154,3 +155,19 @@
 </body>
 </html>
 <script src="./recipe.js"></script>
+
+<script type="module">
+    import nvbr from './components/nvbr.js'
+    console.log(nvbr);
+
+    let container=document.getElementById('navbarFromGulam')
+    container.innerHTML=nvbr()
+
+</script>
+
+
+<script type="module">
+    import auth from './auth.js'
+    auth()
+    
+</script>
