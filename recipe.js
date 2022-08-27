@@ -236,5 +236,5 @@ defaultFunction()
 
 
     function premium(){
-        window.location.href='premium1.html'
+        window.location.href='checkout.html'
     }
