@@ -1,3 +1,6 @@
+import nvbr from "./components/nvbr.js";
+ let container=document.getElementById("nvbr_container");container.innerHTML=nvbr();
+
 function signup() {
     window.location.href = "signup.html";
 }
@@ -23,9 +26,6 @@ left_btn.addEventListener("click", function () {
 
 function viewAllFunc() {
     window.location.href = "view.html";
-}
-function signup() {
-    window.location.href = "signup.html";
 }
 function ViewAllRecipes() {
     window.location.href = "viewRecipes.html";
