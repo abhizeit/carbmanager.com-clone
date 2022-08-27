@@ -253,3 +253,16 @@ nav {
 }
 
 /* 3rd Box - Css */
+#feature {
+  width: 95vw;
+  height: 80vh;
+  border: 1px solid red;
+  margin: 5rem auto;
+  text-align: center;
+}
+#feature > h1 {
+  border: 1px solid black;
+  width: 38%;
+  margin: auto;
+  padding: 1rem;
+}
