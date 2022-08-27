@@ -20,7 +20,7 @@ let searchMe= async ()=>{
             
             data=await res.json()
             let actual_data=data.searchResults[0].results
-            console.log('data:', actual_data)
+            // console.log('data:', actual_data)
             appendData(data)
             localStorage.setItem('empty','full')
         }catch(err){
@@ -40,7 +40,7 @@ let searchMe= async ()=>{
                 
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
                 localStorage.setItem('empty','full')
             }catch(err){
@@ -100,7 +100,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
@@ -115,7 +115,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
@@ -129,7 +129,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
@@ -143,7 +143,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
@@ -160,7 +160,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
@@ -174,7 +174,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
@@ -188,7 +188,7 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
 
     }catch(err){
@@ -203,13 +203,24 @@ defaultFunction()
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
-                console.log('data:', actual_data)
+                // console.log('data:', actual_data)
                 appendData(data)
     }catch(err){
         console.log(err);
     }
     }
-
+    function showMenu() {
+        let mobileview = document.querySelector(".mobile-access-btn");
+        let data = document.getElementById("nav");
+        let mobileMenu = document.querySelector(".mobile-menu");
+        if (mobileMenu.style.display == "none") {
+          mobileMenu.style.display = "block";
+          mobileview.innerHTML=null;
+          mobileview.append(data);
+        } else {
+          mobileMenu.style.display = "none";
+        }
+      }
 
     // let home=document.getElementById('search_bar').addEventListener('input',function(){
     //     localStorage.setItem('empty','empty')
@@ -222,3 +233,8 @@ defaultFunction()
     //     search='in'
     //     searchMe()
     // }
+
+
+    function premium(){
+        window.location.href='premium1.html'
+    }

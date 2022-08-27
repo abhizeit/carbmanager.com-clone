@@ -2,9 +2,9 @@ function nvbr() {
   return `<nav>
     <div class="navbar">
       <!-- //1st -->
-      <div class="logo-container">
+      <div id="thisIsHome" class="logo-container">
         <img class="logo" src="./images/logo.PNG" alt="logo" />
-        <span>Carb Manager&#174;</span>
+        <span id="carbsManager">Carb Manager&#174;</span>
       </div>
       <!-- //2nd// -->
       <ul class="menu">
