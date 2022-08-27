@@ -4,7 +4,7 @@ function nvbr() {
       <!-- //1st -->
       <div id="thisIsHome" class="logo-container">
         <img class="logo" src="./images/logo.PNG" alt="logo" />
-        <span id="carbsManager">Carb Manager&#174;</span>
+        <span id="carbsManager">Carb Manager<sup>&reg;</sup></span>
       </div>
       <!-- //2nd// -->
       <ul class="menu">
@@ -17,11 +17,9 @@ function nvbr() {
         <div class="cancel-btn"><i class="fas fa-times"></i></div>
       </ul>
       <!-- 3rd -->
-      <div id="nav" class="access-btn" >
+      <div id="nav">
         <span><a href="login.html" id="log">Log In</a></span>
-        <div id="logout">
-        <p>logout</p>
-        </div>
+        <span id="logout">logout</span>
         <span><a href="signup.html" id="join">Join For Free</a></span>
       </div>
     </div>

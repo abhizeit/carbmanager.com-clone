@@ -3,21 +3,8 @@
 }
 
 /* abhijeet's code */
-#nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-
 #logout {
-  display: none;
-  font-size: 18px;
-  color: black;
-  background-color: white;
-  padding: 5px 40px;
-  border-radius: 20px;
-  width: 30%;
+  color: white;
 }
 
 .mobile-access-btn {
@@ -35,10 +22,9 @@ body {
   box-sizing: border-box;
 }
 
+
 nav {
   width: 100%;
-  padding: 1.5rem 3rem;
-  display: flex;
   background-color: rgb(33, 181, 131);
   position: fixed;
   top: 0;
@@ -48,9 +34,27 @@ nav {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  width: 90%;
-  padding: 10px;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 30px;
+}
+
+#nav span {
+  margin-right: 12px;
+  font-size: 17px;
+}
+
+#nav span:hover {
+  border-bottom: 2px solid white;
+}
+
+#nav span:nth-child(3):hover {
+  border: none;
+}
+
+#nav span a {
+  text-decoration: none;
+  color: white;
 }
 
 .logo-container {
@@ -79,9 +83,13 @@ nav {
 .menu {
   display: flex;
   align-items: center;
-  width: 60%;
+  width: 50%;
   justify-content: space-around;
   padding: 0 30px;
+}
+
+.menu a:hover {
+  border-bottom: 2px solid white;
 }
 
 .menu li {
@@ -94,12 +102,7 @@ nav {
   color: white;
 }
 
-div#nav.access-btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 40%;
-}
+
 
 .access-btn span a {
   text-decoration: none;
@@ -107,16 +110,16 @@ div#nav.access-btn {
   font-size: 1.1rem;
 }
 
-#logout p {
-  color: white;
-}
-
-#join {
+#nav #join {
   background-color: white;
   color: rgb(33, 180, 130);
   padding: 15px 15px;
   border-radius: 50px;
-  width: 100%;
+}
+
+#nav #join:hover {
+  transform: translate(0, 40px);
+  color: green;
 }
 
 .access-btn span:nth-child(3):hover {
@@ -140,7 +143,8 @@ div#nav.access-btn {
   }
 
   .menu {
-    margin-top: 10rem;
+    margin-top: 15rem;
+    padding: 20px 0;
   }
 
   .logo-container img {

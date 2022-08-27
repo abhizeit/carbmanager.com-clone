@@ -15,10 +15,10 @@ function auth(){
         premium.style.display = "none";
       }
       navbar.addEventListener("mouseover", () => {
-        logout.style.display = "block";
+        // logout.style.display = "block";
       });
       navbar.addEventListener("mouseout", () => {
-        logout.style.display = "none";
+        // logout.style.display = "none";
       });
     }else{
       navbar.style.display="block"
