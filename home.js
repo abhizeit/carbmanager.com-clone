@@ -1,8 +1,8 @@
 import nvbr from "./components/nvbr.js";
+import auth from "./auth.js";
 let container = document.getElementById("nvbr_container");
 container.innerHTML = nvbr();
-
-
+auth()
 let imageLink = [
     "https://t4.ftcdn.net/jpg/01/97/99/09/360_F_197990963_sjL87u6EAOYC5mSml9XpDP1R6C7ztiJc.jpg", "https://media.gettyimages.com/photos/friends-enjoying-lunch-picture-id533579878?s=612x612", "https://www.honestbrandreviews.com/wp-content/uploads/2022/07/Carb-Manager-Review-9.jpg", "https://media.gettyimages.com/photos/preparing-ketogenic-diet-food-in-kitchen-picture-id1195697678?s=612x612", "https://i.dietdoctor.com/wp-content/uploads/2018/05/DD_vegetarian_keto_16-9.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop", "https://c.ndtvimg.com/2019-03/vgd7842_low-carb-diet-for-weight-loss_625x300_06_March_19.jpg"
 ];

@@ -9,15 +9,15 @@ function nvbr() {
       <!-- //2nd// -->
       <ul class="menu">
         <li><a href="./features.html">Features</a></li>
-        <li><a href="#premium">Premium</a></li>
-        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="premium1.html">Premium</a></li>
+        <li><a href="recipe.html">Recipes</a></li>
         <li><a href="#articles">Articles</a></li>
         <li><a href="#cookbook">Cookbook</a></li>
-        <li><a href="#support">Support</a></li>
+        <li><a href="support.html">Support</a></li>
         <div class="cancel-btn"><i class="fas fa-times"></i></div>
       </ul>
       <!-- 3rd -->
-      <div id="nav" class="access-btn">
+      <div id="nav" class="access-btn" >
         <span><a href="login.html" id="log">Log In</a></span>
         <div id="logout">
         <p>logout</p>
@@ -33,17 +33,16 @@ function nvbr() {
 
   <div class="mobile-menu">
     <ul class="menu">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#premium">Premium</a></li>
-      <li><a href="#recipes">Recipes</a></li>
+      <li><a href="features.html">Features</a></li>
+      <li><a href="premium1.html">Premium</a></li>
+      <li><a href="recipe.html">Recipes</a></li>
       <li><a href="#articles">Articles</a></li>
       <li><a href="#cookbook">Cookbook</a></li>
-      <li><a href="#support">Support</a></li>
+      <li><a href="support.html">Support</a></li>
       <div class="cancel-btn"><i class="fas fa-times"></i></div>
     </ul>
     <!-- 3rd -->
     <div class="access-btn mobile-access-btn">
-      
     </div>
   </div>`;
 }
