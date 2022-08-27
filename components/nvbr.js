@@ -6,7 +6,7 @@ function nvbr() {
         <img class="logo" src="./images/logo.PNG" alt="logo" />
         <span>Carb Manager&#174;</span>
       </div>
-      <!-- //2nd -->
+      <!-- //2nd// -->
       <ul class="menu">
         <li><a href="./features.html">Features</a></li>
         <li><a href="#premium">Premium</a></li>
