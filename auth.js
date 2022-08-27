@@ -6,11 +6,11 @@ function auth(){
     let navbar = document.querySelector("#nav");
     if (user != null) {
       document.getElementById("log").textContent = user.username;
-      document.getElementById("log").href = "";
+      document.getElementById("log").href = "#";
       if (user.pm == true) {
         premium.textContent = "Premium User";
         navbar.style.flexDirection="column"
-        premium.href="";
+        premium.href="#";
       } else {
         premium.style.display = "none";
       }
