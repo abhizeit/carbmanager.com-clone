@@ -7,18 +7,19 @@ function auth(){
     if (user != null) {
       document.getElementById("log").textContent = user.username;
       document.getElementById("log").href = "#";
+      navbar.style.flexDirection="column"
       if (user.pm == true) {
         premium.textContent = "Premium User";
-        navbar.style.flexDirection="column"
+        
         premium.href="#";
       } else {
         premium.style.display = "none";
       }
       navbar.addEventListener("mouseover", () => {
-        // logout.style.display = "block";
+        logout.style.display = "block";
       });
       navbar.addEventListener("mouseout", () => {
-        // logout.style.display = "none";
+        logout.style.display = "none";
       });
     }else{
       navbar.style.display="block"

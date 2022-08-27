@@ -17,11 +17,13 @@ function nvbr() {
         <div class="cancel-btn"><i class="fas fa-times"></i></div>
       </ul>
       <!-- 3rd -->
-      <div id="nav">
-        <span><a href="login.html" id="log">Log In</a></span>
-        <span id="logout">logout</span>
-        <span><a href="signup.html" id="join">Join For Free</a></span>
-      </div>
+      <div id="nav" class="access-btn">
+          <span><a id="log" href="login.html">Log In</a></span>
+          <div id="logout">
+            <p>logout</p>
+          </div>
+          <span><a href="signup.html" id="join">Join For Free</a></span>
+        </div>
     </div>
     <!-- menu btn -->
     <div class="menu-btn" onclick="showMenu()">
