@@ -43,10 +43,15 @@ nav {
   width: fit-content;
   /* justify-content: space-around; */
 }
+#carbsManager:hover{
+color: #3177bb;
+}
+
 
 .logo-container:hover {
   opacity: 0.85;
   cursor: pointer;
+  color: #3177bb;
 }
 
 .logo-container img {
@@ -452,36 +457,6 @@ h3 {
   text-decoration: none;
 }
 
-@media all and (max-width: 1130px) {
-  #filtering>button {
-    display: none;
-  }
-}
-
-@media all and (max-width: 720px) {
-  #explore {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
-    font-size: 35px;
-    font-weight: 400;
-    line-height: 48px;
-    color: #fff;
-    line-height: 60px;
-    margin-bottom: 40px;
-  }
-}
-
-@media all and (max-width: 1038px) {
-  #container {
-    display: grid;
-    grid-template-columns: repeat(1, 50%);
-  }
-
-  #search_button {
-    display: none;
-  }
-}
-
 .flex {
   display: flex;
   justify-content: space-between;
@@ -684,4 +659,96 @@ hr {
 
 .Top {
   text-decoration: none;
+}
+
+
+
+
+@media all and (min-width:481px) and (max-width:768px) {
+#footer_final {
+  display: flex;
+  width: 60%;
+  margin: 6% auto;
+}
+
+#footer_final #footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#footer_final #footer1 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+hr {
+  color: rgb(206, 202, 202);
+  margin: 6% 0 6% 12%;
+}
+
+#footer2 {
+  display: flex;
+  gap: 20px;
+}
+}
+
+@media all and (min-width:360px) and (max-width:640px) {
+  #footer_final {
+    display: flex;
+    width: 60%;
+    margin: 6% auto;
+}
+
+#footer_final #footer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#footer_final #footer1 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+hr {
+    color: rgb(206, 202, 202);
+    margin: 6% 0;
+}
+}
+
+
+
+@media all and (max-width: 1130px) {
+  #filtering>button {
+    display: none;
+  }
+}
+
+@media all and (max-width: 720px) {
+  #explore {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #fff;
+    line-height: 60px;
+    margin-bottom: 40px;
+  }
+
+  
+}
+
+@media all and (max-width: 1038px) {
+  #container {
+    display: grid;
+    grid-template-columns: repeat(1, 50%);
+  }
+
+  #search_button {
+    display: none;
+  }
 }
