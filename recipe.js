@@ -222,3 +222,8 @@ defaultFunction()
     //     search='in'
     //     searchMe()
     // }
+
+
+    function premium(){
+        window.location.href='premium1.html'
+    }

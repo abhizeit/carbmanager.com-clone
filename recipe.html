@@ -11,8 +11,10 @@
     
 </head>
 <link rel="stylesheet" href="./recipe.css">
+<!-- <link rel="stylesheet" href="navbar.css"> -->
+
 <body>
-    <div id="navbarFromGulam"></div>
+    <div id="nvbr_container"></div>
 
 
 <!-- 
@@ -124,7 +126,7 @@
             <p>Unlock all of Carb Manager's cutting-edge features with a Premium Membership.</p>
             <button onclick="premium()">
                 <i class="fas fa-trophy"></i>
-                <span>Get Premium</span>
+                <span onclick="premium()">Get Premium</span>
             </button>
         </div>
         <div></div>
@@ -216,9 +218,14 @@
     import nvbr from './components/nvbr.js'
     // console.log(nvbr);
 
-    let container=document.getElementById('navbarFromGulam')
+    let container=document.getElementById('nvbr_container')
     container.innerHTML=nvbr()
+    let home= document.getElementById('thisIsHome').addEventListener('click',function(){
+        window.location.href='home.html'
+    })
     
+
+
     
     import auth from './auth.js'
     auth()

@@ -12,12 +12,16 @@
   height: 200vh;
   border: 1px solid red;
 } */
+
 nav {
   width: 100%;
-  border: 1px solid #0011;
+  background-color: white;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  height: auto;
   padding: 1.5rem 3rem;
   display: flex;
-  background-color: white;
+  /* background-color: transparent; */
   position: fixed;
   top: 0;
   left: 0;
@@ -25,6 +29,7 @@ nav {
 }
 
 .navbar {
+  height: auto;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -41,11 +46,12 @@ nav {
 
 .logo-container:hover {
   opacity: 0.85;
+  cursor: pointer;
 }
 
 .logo-container img {
   width: 20%;
-  border: 1px solid #00c290;
+  /* border: 1px solid #00c290; */
   border-radius: 5px;
 }
 
@@ -75,17 +81,20 @@ nav {
   color: black;
 }
 
+.menu li a:hover {
+  text-decoration: underline;
+  color: #6898ec;
+}
+
 .access-btn {
-  display: flex;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 20%;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
 .access-btn span a {
-  border: 1px solid red;
-
   text-decoration: none;
   color: black;
   font-size: 1.1rem;
@@ -106,37 +115,6 @@ nav {
 .mobile-menu {
   display: none;
 }
-
-/* ==================updated================ */
-#nav {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#logout {
-  display: none;
-  font-size: 18px;
-  color: rgb(225, 107, 98);
-  background-color: white;
-  padding: 5px 40px;
-  border-radius: 20px;
-}
-
-.mobile-access-btn {
-  display: flex;
-  align-items: center;
-  width: 20%;
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-}
-
-
-
-
-
 
 @media screen and (max-width: 1200px) {
 
@@ -208,9 +186,47 @@ nav {
 
   #join {
     background-color: #00c290;
+    /* width: 20%; */
     color: white;
   }
 }
+
+#nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav :hover{
+color: #3177bb;
+text-decoration: underline;
+
+}
+
+#logout {
+  display: none;
+  font-size: 18px;
+  color: rgb(225, 107, 98);
+  background-color: white;
+  padding: 5px 40px;
+  border-radius: 20px;
+}
+
+.mobile-access-btn {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+
+
 
 /* ==================upperSection===================== */
 * {
