@@ -1,6 +1,29 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/* abhijeet's code */
+#nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+#logout {
+  display: none;
+  font-size: 18px;
+  color: rgb(225,  107,  98);
+  background-color: white;
+  padding: 5px 40px;
+  border-radius: 20px;
+}
+.mobile-access-btn {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
 
 body {
   margin: 0;
@@ -24,7 +47,6 @@ nav {
   justify-content: space-between;
   width: 90%;
   padding: 10px;
-
 }
 
 .logo-container {
@@ -42,7 +64,6 @@ nav {
   border: 5px solid rgb(33, 180, 130);
   border-radius: 10px;
   margin-right: 3px;
-
 }
 
 .logo-container span {
@@ -69,11 +90,11 @@ nav {
   color: white;
 }
 
-.access-btn {
+div#nav.access-btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 40%;
 }
 
 .access-btn span a {
@@ -108,7 +129,6 @@ nav {
 }
 
 @media screen and (max-width: 1200px) {
-
   .menu,
   .access-btn {
     display: none;
