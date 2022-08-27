@@ -25,7 +25,7 @@ function auth(){
     }
     logout.addEventListener("click", () => {
       localStorage.setItem("loggedin", null);
-      window.location.href = "navbar2.html";
+      window.location.href = "home.html";
     });  
 }
 
