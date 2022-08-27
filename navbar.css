@@ -8,6 +8,28 @@
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
+#nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+#logout{
+  display: none;
+  font-size: 18px;
+  color: rgb(225, 107, 98);
+  background-color: white;
+  padding: 5px 40px;
+  border-radius: 20px;
+}
+.mobile-access-btn{
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin :auto;
+  align-items: center;
+  justify-content: center;
+}
 
 
 /* body {
