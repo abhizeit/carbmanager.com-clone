@@ -10,21 +10,11 @@
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
+
 <body>
-    <div id="navbar">
-        <img src="https://play-lh.googleusercontent.com/LI_Y6I6uMS_DrhO7tHDTH-_YaYLJLM3rS9yReRuGzbk8VfoZvkOlZh7zZfCCOakJGDs"
-            alt="">
-        <h3>Carb-Manager <sup>&reg</sup></h3>
-        <h3>Features</h3>
-        <h3>Premium</h3>
-        <h3>Recipes</h3>
-        <h3>Articles</h3>
-        <h3>Cookbook</h3>
-        <h3>Supports</h3>
-        <h3>Log In</h3>
-        <h3>Join For Free</h3>
-    </div>
+    <div id="nvbr_container"></div>
     <div id="top"></div>
     <div id="navbar2">
         <div>
@@ -33,7 +23,7 @@
             <p>For healthy & sustainable low-carb living</p>
             <div class="flex">
                 <input type="email" placeholder="Enter email address">
-                <div onclick="signup()">Create Free Account</div>
+                <div id="signup">Create Free Account</div>
             </div>
             <a target="_blank"
                 href="https://play.google.com/store/apps/details?id=com.wombatapps.carbmanager&hl=en"><img
@@ -915,7 +905,7 @@
             </div>
         </div>
     </div>
-    <button onclick="viewAllFunc()">View All</button>
+    <button id="viewAll">View All</button>
 
     <div id="low_carb">
         <img src="https://thumbs.dreamstime.com/b/health-food-high-fiber-content-concept-diet-fruit-vegetables-cereals-whole-wheat-pasta-grains-legumes-herbs-foods-102328760.jpg"
@@ -924,7 +914,7 @@
             <h1>Keep up With Keto & Low-Carb</h1>
             <p>Easily Start and Maintain a Healthy Keto lifestyle, with everything You need to know at your fingertipes.
             </p>
-            <button onclick="signup()">Get Started</button>
+            <button id="signup1">Get Started</button>
         </div>
     </div>
 
@@ -953,13 +943,13 @@
             <h3>Keto <span>Smoothie</span> Recipes</h3>
         </div>
     </div>
-    <button onclick="ViewAllRecipes()">View All Recipes</button>
+    <button id="view">View All Recipes</button>
 
     <div id="premium">
         <div>
             <h1>Looking for Premium?</h1>
             <p>Unlock all of Carb Manager's cutting-edge features with a Premium Membership.</p>
-            <button onclick="premium()">
+            <button id="premium">
                 <i class="fas fa-trophy"></i>
                 <span>Get Premium</span>
             </button>
@@ -976,13 +966,13 @@
     <div id="footer_final">
         <div id="footer">
             <div>
-                <a href="https://www.carbmanager.com/feature-summary">Features</a>
+                <a href="features.html">Features</a>
             </div>
             <div>
-                <a href="premium.html">Premium</a>
+                <a href="premium1.html">Premium</a>
             </div>
             <div>
-                <a href="https://www.carbmanager.com/recipes">Keto Recipes</a>
+                <a href="recipe.js">Keto Recipes</a>
             </div>
             <div>
                 <a href="https://www.carbmanager.com/cookbook">Keto Cookbook</a>
@@ -991,13 +981,13 @@
                 <a href="https://www.carbmanager.com/articles">Articles</a>
             </div>
             <div>
-                <a href="https://www.carbmanager.com/about-us">About Us</a>
+                <a href="custum.html">About Us</a>
             </div>
             <div>
-                <a href="https://www.carbmanager.com/food-index">Foods</a>
+                <a href="view.html">Foods</a>
             </div>
             <div>
-                <a href="https://help.carbmanager.com/">Supports</a>
+                <a href="support.html">Supports</a>
             </div>
             <div>
                 <a href="login.html">Log In</a>
@@ -1008,14 +998,13 @@
         </div>
     
         <div id="footer1">
-            <div>Gift Cards</div>
-            <div>Support Center</div>
+            <div id="giftCards">Gift Cards</div>
+            <div id="support">Support Center</div>
             <div>Forums</div>
-            <div>Terms Of Service
-            </div>
-            <div>Privacy Policy</div>
-            <div>Contact</div>
-            <div>System Status</div>
+            <div id="Term">Terms Of Service</div>
+            <div id="Documents">Privacy Policy</div>
+            <div id="Contact">Contact</div>
+            <div id="setGoal">System Status</div>
         </div>
     </div>
     
@@ -1046,4 +1035,4 @@
     </a>
 </body>
 </html>
-<script src="home.js"></script>
+<script type="module" src="home.js"></script>
