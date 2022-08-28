@@ -164,6 +164,11 @@ nav {
     display: flex;
     justify-content: space-between;
   }
+  #nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: center ;
+  }
   #nav span a {
     color: black;
   }
