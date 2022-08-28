@@ -161,6 +161,11 @@ nav {
   nav {
     background-color: white;
     padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  #nav span a {
+    color: black;
   }
 
   .logo-container span {
