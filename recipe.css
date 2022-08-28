@@ -370,7 +370,7 @@ text-decoration: underline;
   justify-content: space-evenly;
   transition: background 0.1s ease-out;
   align-items: center;
-  border: 1px solid #6f737a;
+  /* border: 1px solid #6f737a; */
 }
 
 #filterByName>div:nth-child(1) img {
@@ -452,6 +452,7 @@ h3 {
 #filterByName>div:nth-child(1):hover {
   cursor: pointer;
   background-color: #6f737a;
+  border: 0px;
   color: white;
   transition: ease-in 0.5s;
   text-decoration: none;
@@ -752,3 +753,7 @@ hr {
     display: none;
   }
 }
+
+/* #filterByName div{
+border: 2px sold red;
+} */
