@@ -664,7 +664,7 @@ hr {
 
 
 
-@media all and (min-width:481px) and (max-width:768px) {
+@media all and (min-width:481px) and (max-width:900px) {
 #footer_final {
   display: flex;
   width: 60%;

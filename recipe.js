@@ -16,7 +16,7 @@ let searchMe= async ()=>{
         try{
             search=document.getElementById('search_bar').value
             // value=search
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=${search}&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
             
             data=await res.json()
             let actual_data=data.searchResults[0].results
@@ -36,7 +36,7 @@ let searchMe= async ()=>{
             try{
                 // search=document.getElementById('search_bar').value
                 // value=search
-                let res=await fetch(`https://api.spoonacular.com/food/search?query=&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+                let res=await fetch(`https://api.spoonacular.com/food/search?query=&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
                 
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -96,7 +96,7 @@ defaultFunction()
     let chinese=document.getElementById('chinese')
     async function China(){
         try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=chinese&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=chinese&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -111,7 +111,7 @@ defaultFunction()
     let quick=document.getElementById('quick')
     async function Quick(){
         try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=quick&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=quick&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -125,7 +125,7 @@ defaultFunction()
     let burger=document.getElementById('burger')
     async function Burger(){
         try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=burger&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=burger&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -139,7 +139,7 @@ defaultFunction()
     let desert=document.getElementById('desert')
     async function Desert(){
         try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=dess&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=dess&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -156,7 +156,7 @@ defaultFunction()
     let all=document.getElementById('all')
     async function All(){
     try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=a&number=100&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=a&number=100&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -170,7 +170,7 @@ defaultFunction()
     let most=document.getElementById('most')
     async function Most(){
     try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=po&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=po&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -184,7 +184,7 @@ defaultFunction()
     let special=document.getElementById('special')
     async function Special(){
     try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=sp&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=sp&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
@@ -199,7 +199,7 @@ defaultFunction()
     let recipe=document.getElementById('recipe')
     async function Bevrages(){
     try{
-            let res=await fetch(`https://api.spoonacular.com/food/search?query=be&number=30&apiKey=4fc6bc33913f4a69b54a4fd852e2bc68`)
+            let res=await fetch(`https://api.spoonacular.com/food/search?query=be&number=30&apiKey=6601f3596bbc48d18afb36d368315f0d`)
              
                 data=await res.json()
                 let actual_data=data.searchResults[0].results
