@@ -43,7 +43,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 30px 30px;
+  padding: 14px 30px;
 }
 
 #nav span {
@@ -160,7 +160,6 @@ nav {
 
   nav {
     background-color: white;
-    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
   }
